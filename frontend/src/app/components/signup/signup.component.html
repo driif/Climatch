@@ -1,0 +1,17 @@
+<div class="form-container">
+  <form class="form-box" [formGroup]="signupForm" (ngSubmit)="registerUser()">
+    <label class="form-label" for="email">Email: </label>
+    <input class="form-control" id="email" type="email" formControlName="email"/>
+
+    <label class="form-label" for="password">Password: </label>
+    <input class="form-control" id="password" type="password" formControlName="password"/>
+
+    <label class="form-label" for="confirmPassword">Confirm Password: </label>
+    <input class="form-control" id="confirmPassword" type="password" formControlName="confirmPassword"/>
+    <button class="submit-btn" type="submit" name="submit">Submit</button>
+    <br>
+    <br>
+    <a class="text-purple-500 no-underline hover:underline" routerLink="/login">Klicken, wenn ein Konto schon existiert</a>
+  </form>
+</div>
+

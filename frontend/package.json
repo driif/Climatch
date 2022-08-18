@@ -1,0 +1,57 @@
+{
+  "name": "scientist-frontend",
+  "version": "0.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "node server.js",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test",
+    "heroku-postbuild": "ng build --configuration production"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "^14.1.1",
+    "@angular/cdk": "^14.1.1",
+    "@angular/cli": "^14.1.1",
+    "@angular/common": "^14.1.1",
+    "@angular/compiler": "^14.1.1",
+    "@angular/compiler-cli": "^14.1.1",
+    "@angular/core": "^14.1.1",
+    "@angular/forms": "^14.1.1",
+    "@angular/material": "^14.1.1",
+    "@angular/platform-browser": "^14.1.1",
+    "@angular/platform-browser-dynamic": "^14.1.1",
+    "@angular/router": "^14.1.1",
+    "@ngtools/webpack": "^14.1.1",
+    "@tailwindcss/forms": "^0.5.2",
+    "@tailwindcss/typography": "^0.5.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "path": "^0.12.7",
+    "rxjs": "~7.5.0",
+    "tslib": "^2.3.0",
+    "typescript": "~4.6.2",
+    "zone.js": "~0.11.4"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^14.1.1",
+    "@angular/cli": "^14.1.1",
+    "@angular/compiler-cli": "^14.1.1",
+    "@types/jasmine": "~3.10.0",
+    "@types/node": "^12.11.1",
+    "jasmine-core": "~4.0.0",
+    "karma": "~6.3.0",
+    "karma-chrome-launcher": "~3.1.0",
+    "karma-coverage": "~2.1.0",
+    "karma-jasmine": "~4.0.0",
+    "karma-jasmine-html-reporter": "~1.7.0",
+    "postcss": "^8.4.14",
+    "tailwindcss": "^3.0.24",
+    "typescript": "~4.6.2"
+  },
+  "engines": {
+    "node": "16.16.0",
+    "npm": "8.11.0"
+  }
+}

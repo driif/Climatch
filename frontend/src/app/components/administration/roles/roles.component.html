@@ -1,0 +1,24 @@
+<div class="table-container" *ngIf="roles">
+  <table class="tbl">
+    <thead class="tbl-header">
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="tbl-body-tr" *ngFor="let role of roles">
+      <th class="tbl-body-th">{{role.id}}</th>
+      <td>{{role.name}}</td>
+      <td>{{role.description}}</td>
+      <td>
+        <button class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</button>
+      </td>
+      <td>
+        <button class="font-medium text-rose-600 dark:text-blue-500 hover:underline">Delete</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

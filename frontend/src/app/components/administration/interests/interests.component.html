@@ -1,0 +1,24 @@
+<div class="table-container" *ngIf="interests">
+  <table class="tbl">
+    <thead class="tbl-header">
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="tbl-body-tr" *ngFor="let interest of interests">
+      <th class="tbl-body-th">{{interest.id}}</th>
+      <td>{{interest.name}}</td>
+      <td>{{interest.description}}</td>
+      <td>
+        <button class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</button>
+      </td>
+      <td>
+        <button class="font-medium text-rose-600 dark:text-blue-500 hover:underline">Delete</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

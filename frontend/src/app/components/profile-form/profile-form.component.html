@@ -1,0 +1,63 @@
+<div class="edit-profile-title">
+  <h1>Geben sie bitte die Angaben zu Ihrem Person ein.</h1>
+</div>
+<div class="edit-profile-wrapper">
+  <div >
+    <form #profileForm="ngForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label class="form-label" for="firstname">First Name: </label>
+        <input
+          type="text"
+          class="form-control"
+          id="firstname"
+          required
+          [(ngModel)]="model.firstname"
+          name="firstname"
+        >
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="lastname">Last Name: </label>
+        <input
+          type="text"
+          class="form-control"
+          id="lastname"
+          required
+          [(ngModel)]="model.lastname"
+          name="lastname"
+        >
+      </div>
+      <div class="form-group">
+        <mat-form-field class="example-chip-list" appearance="fill">
+          <mat-label>My Interests</mat-label>
+          <mat-chip-list #chipList aria-label="Interest selection">
+            <mat-chip
+              *ngFor="let checkedInterest of selectedInterests"
+              (removed)="remove(checkedInterest)">
+              {{checkedInterest.name}}
+              <button matChipRemove>
+                <mat-icon>cancel</mat-icon>
+              </button>
+            </mat-chip>
+            <input
+              placeholder="New Interest..."
+              #interestInput
+              [formControl]="interestCtrl"
+              [matAutocomplete]="auto"
+              [matChipInputFor]="chipList"
+              [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+              (matChipInputTokenEnd)="add($event)">
+          </mat-chip-list>
+          <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
+            <mat-option *ngFor="let interest of filteredInterests | async" [value]="interest">
+              {{interest.name}}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+      </div>
+      <button class="submit-btn" type="submit" name="submit">Submit</button>
+    </form>
+  </div>
+  <div>
+    <app-my-checkbox [elements]="roles" (checkedElements)="addCheckedRoles($event)"></app-my-checkbox>
+  </div>
+</div>

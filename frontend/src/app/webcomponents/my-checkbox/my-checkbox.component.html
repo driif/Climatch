@@ -1,0 +1,13 @@
+<div *ngIf="elements">
+<div class="checkbox-container" *ngFor="let element of elements">
+  <input
+    type="checkbox"
+    class="checkbox-input"
+    id="role"
+    name="role"
+    [checked]="element.checked"
+    (change)="onChange(element.id)"
+  >
+  <label class="checkbox-label" for="role">{{ element.name }}</label>
+</div>
+</div>

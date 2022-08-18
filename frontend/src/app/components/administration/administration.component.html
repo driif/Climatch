@@ -1,0 +1,17 @@
+<div class="form-container">
+  <button routerLink="/administration/users" routerLinkActive="btn-active" class="submit-btn w-1/6" type="button" (click)="getUsers()">
+    Users
+  </button>
+  <button routerLink="/administration/interests" routerLinkActive="btn-active" class="submit-btn w-1/6" type="button">
+    Interests
+  </button>
+  <button routerLink="/administration/roles" routerLinkActive="btn-active" class="submit-btn w-1/6" type="button">
+    Roles
+  </button>
+  <button class="submit-btn w-1/6" type="button">
+    Permissions
+  </button>
+</div>
+<div class="">
+  <router-outlet></router-outlet>
+</div>
