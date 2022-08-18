@@ -8,7 +8,7 @@ import {AdministrationComponent} from "./components/administration/administratio
 import {UsersComponent} from "./components/administration/users/users.component";
 import {InterestsComponent} from "./components/administration/interests/interests.component";
 import {RolesComponent} from "./components/administration/roles/roles.component";
-import { MyProfileComponent } from 'src/app/components/my-profile/my-profile.component';
+import { MyProfileComponent } from './components/my-profile/my-profile.component';
 
 const routes: Routes = [
   {path: 'signup', component: SignupComponent},
