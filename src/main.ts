@@ -8,9 +8,9 @@ async function bootstrap() {
     origin: [
       'localhost:3000',
       'localhost:4200',
-      'https://climatch.herokuapp.com',
+      'http://climatch.herokuapp.com',
       'climatch-api.herokuapp.com',
-      'https://climatch.herokuapp.com/',
+      'http://climatch.herokuapp.com/',
       '0.0.0.0:3000',
       '127.0.0.1:3000',
     ],
