@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: 'https://climatch-api.herokuapp.com/'
+  apiUrl: `${location.protocol}//${location.host}`,
 };
