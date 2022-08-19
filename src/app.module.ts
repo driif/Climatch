@@ -15,7 +15,7 @@ import { join } from 'path';
       isGlobal: true,
     }),
     ServeStaticModule.forRoot({
-      rootPath: join(__dirname, '..', 'dist/public'),
+      rootPath: join(__dirname, '', 'public'),
     }),
     UserModule,
     AuthModule,
