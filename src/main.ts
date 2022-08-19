@@ -5,7 +5,11 @@ import { ValidationPipe } from '@nestjs/common';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.enableCors({
-    origin: ['localhost:3000', 'localhost:4200'],
+    origin: [
+      'localhost:3000',
+      'localhost:4200',
+      'https://climatch.herokuapp.com',
+    ],
     methods: ['GET', 'PUT', 'POST', 'DELETE'],
     credentials: true,
   });
