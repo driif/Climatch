@@ -23,6 +23,7 @@ import {MatCheckboxModule} from "@angular/material/checkbox";
 import {MatChipsModule} from "@angular/material/chips";
 import {MatIconModule} from "@angular/material/icon";
 import { MyProfileComponent } from './components/my-profile/my-profile.component';
+import { MatMenuModule } from '@angular/material/menu';
 
 @NgModule({
   declarations: [
@@ -38,19 +39,20 @@ import { MyProfileComponent } from './components/my-profile/my-profile.component
     RolesComponent,
     MyProfileComponent,
   ],
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    AppRoutingModule,
-    ReactiveFormsModule,
-    FormsModule,
-    BrowserAnimationsModule,
-    MatInputModule,
-    MatAutocompleteModule,
-    MatCheckboxModule,
-    MatChipsModule,
-    MatIconModule
-  ],
+	imports: [
+		BrowserModule,
+		HttpClientModule,
+		AppRoutingModule,
+		ReactiveFormsModule,
+		FormsModule,
+		BrowserAnimationsModule,
+		MatInputModule,
+		MatAutocompleteModule,
+		MatCheckboxModule,
+		MatChipsModule,
+		MatIconModule,
+		MatMenuModule,
+	],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,
