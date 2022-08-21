@@ -3,7 +3,7 @@ import { FormControl, FormGroup } from '@angular/forms';
 import { AuthService } from '../../shared/auth.service';
 import { Router } from '@angular/router';
 import { User } from '../../classes/user';
-import { AlertService } from 'src/app/webcomponents/alert/alert.service';
+import { AlertService } from '../../webcomponents/alert/alert.service';
 
 @Component({
   selector: 'app-signup',

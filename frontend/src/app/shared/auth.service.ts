@@ -1,14 +1,10 @@
 import { Injectable } from '@angular/core';
-import {
-  HttpClient,
-  HttpHeaders,
-  HttpErrorResponse,
-} from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { User } from '../classes/user';
 import { Router } from '@angular/router';
-import { catchError, map, Observable, throwError } from 'rxjs';
+import { map, Observable } from 'rxjs';
 import { environment } from '../../environments/environment';
-import { AlertService } from 'src/app/webcomponents/alert/alert.service';
+import { AlertService } from '../webcomponents/alert/alert.service';
 
 @Injectable({
   providedIn: 'root',
