@@ -24,6 +24,7 @@ import {MatChipsModule} from "@angular/material/chips";
 import {MatIconModule} from "@angular/material/icon";
 import { MyProfileComponent } from './components/my-profile/my-profile.component';
 import { MatMenuModule } from '@angular/material/menu';
+import { AlertComponent } from './webcomponents/alert/alert.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { MatMenuModule } from '@angular/material/menu';
     InterestsComponent,
     RolesComponent,
     MyProfileComponent,
+    AlertComponent,
   ],
 	imports: [
 		BrowserModule,

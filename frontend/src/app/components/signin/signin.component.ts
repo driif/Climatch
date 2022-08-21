@@ -1,26 +1,24 @@
-import {Component, OnInit} from '@angular/core';
-import {FormControl, FormGroup} from "@angular/forms";
-import {AuthService} from "../../shared/auth.service";
+import { Component } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
+import { AuthService } from '../../shared/auth.service';
 import { User } from '../../classes/user';
 
 @Component({
   selector: 'app-signin',
   templateUrl: './signin.component.html',
-  styleUrls: ['./signin.component.scss']
+  styleUrls: ['./signin.component.scss'],
 })
-export class SigninComponent implements OnInit {
+export class SigninComponent {
   loginForm = new FormGroup({
     email: new FormControl(''),
-    password: new FormControl('')
-  })
+    password: new FormControl(''),
+  });
 
-  constructor(private authService: AuthService) { }
-
-  ngOnInit(): void {
-  }
+  constructor(private authService: AuthService) {}
 
   loginUser() {
-    this.authService.signIn(new User(this.loginForm.value.email, this.loginForm.value.password));
+    this.authService.signIn(
+      new User(this.loginForm.value.email, this.loginForm.value.password),
+    );
   }
-
 }

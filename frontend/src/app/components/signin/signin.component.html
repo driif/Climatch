@@ -1,5 +1,7 @@
 <div class="form-container">
   <form class="form-box" [formGroup]="loginForm" (ngSubmit)="loginUser()">
+    <app-alert></app-alert>
+
     <label class="form-label" for="email">Email: </label>
     <input class="form-control" id="email" type="email" formControlName="email"/>
 
