@@ -34,6 +34,4 @@ lerna-debug.log*
 !.vscode/launch.json
 !.vscode/extensions.json
 /data/
-/.env
-/.env.test
 /prisma/migrations/20220512183147_init/migration.sql
