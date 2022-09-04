@@ -36,6 +36,7 @@ model Profile {
 
     interests Interest[]
     roles Role[]
+    kontakts Kontakt[]
 
     bio String?
     location String?
@@ -61,4 +62,19 @@ model Role {
   checked Boolean @default(false)
 
   profile Profile[]
+}
+
+model Kontakt {
+    id Int @id @default(autoincrement())
+
+    profileId Int
+    profile Profile @relation(fields: [profileId], references: [id])
+    
+    email String?
+    country String?
+    city String?
+    plz String? 
+    street String?
+    telefon String? 
+    website String? 
 }

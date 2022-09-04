@@ -8,6 +8,7 @@ import { AdministrationController } from './admin/administration/administration.
 import { ProfileModule } from './profile/profile.module';
 import { ServeStaticModule } from '@nestjs/serve-static';
 import { join } from 'path';
+import { KontaktModule } from './kontakt/kontakt.module';
 
 @Module({
   imports: [
@@ -21,6 +22,7 @@ import { join } from 'path';
     AuthModule,
     PrismaModule,
     ProfileModule,
+    KontaktModule,
   ],
   providers: [AdministrationService],
   controllers: [AdministrationController],

@@ -42,13 +42,14 @@ $scientist-frontend-theme: mat.define-light-theme((
 .edit-profile-title{
   display: flex;
   justify-content: space-around;
+}
 
-  .edit-profile-wrapper {
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-  }
+.edit-profile-wrapper {
+  display: grid;
+  
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  column-gap: 20px; 
 }
 // === /Profile ===
 
