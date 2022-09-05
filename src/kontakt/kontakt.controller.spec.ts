@@ -1,5 +1,8 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { KontaktController } from './kontakt.controller';
+import { Kontakt } from '../interfaces/kontakt';
+import { KontaktService } from './kontakt.service';
+import { PrismaService } from '../prisma/prisma.service';
 
 describe('KontaktController', () => {
   let controller: KontaktController;

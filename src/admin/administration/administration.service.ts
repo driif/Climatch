@@ -1,9 +1,9 @@
 import { Injectable } from '@nestjs/common';
-import { InterestDto } from 'src/dto/interest.dto';
-import { RoleDto } from 'src/dto/role.dto';
-import { INTERESTS } from 'src/mocks/interests';
-import { ROLES } from 'src/mocks/roles';
-import { PrismaService } from 'src/prisma/prisma.service';
+import { InterestDto } from '../../dto/interest.dto';
+import { RoleDto } from '../../dto/role.dto';
+import { INTERESTS } from '../../mocks/interests';
+import { ROLES } from '../../mocks/roles';
+import { PrismaService } from '../../prisma/prisma.service';
 
 @Injectable()
 export class AdministrationService {
