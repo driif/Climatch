@@ -1,5 +1,4 @@
 export interface Kontakt {
-    profileId: number;
     email?: string;
     country?: string;
     city?: string; 

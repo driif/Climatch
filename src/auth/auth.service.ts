@@ -32,6 +32,12 @@ export class AuthService {
         },
       });
 
+      const profile = await this.prisma.profile.create({
+        data: {
+          userId: user.id,
+        }
+      })
+
       return this.signToken(user.id, user.email);
     } catch (error) {
       if (error instanceof PrismaClientKnownRequestError) {

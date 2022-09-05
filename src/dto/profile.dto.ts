@@ -2,9 +2,6 @@ import { Interest, Role } from '@prisma/client';
 import { IsArray, IsEmail, IsLocale, IsNumber, IsOptional, IsString } from 'class-validator';
 
 export class ProfileDto {
-  @IsNumber()
-  userId: number;
-
   @IsString()
   @IsOptional()
   firstname?: string;

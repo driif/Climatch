@@ -11,13 +11,8 @@ export class ProfileController {
         return this.profileService.getProfile(id);
     }
 
-    @Post('create')
-    createProfile(@Body() profileDto: ProfileDto) {
-        return this.profileService.createProfile(profileDto);
-    }
-
-    @Put(':id')
-    updateProfile(@Param('id') id: number, @Body() profileDto: ProfileDto) {
-        return profileDto;
-    }    
+    @Post(':id')
+    updateProfile(@Param('id') id: string, @Body() profileDto: ProfileDto) {
+        return this.profileService.updateProfile(parseInt(id), profileDto);
+    }  
 }

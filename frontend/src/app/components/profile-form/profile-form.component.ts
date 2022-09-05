@@ -22,6 +22,8 @@ import {map, Observable, startWith} from "rxjs";
 })
 export class ProfileFormComponent implements OnInit {
   endpoint = environment.apiUrl;
+  id: number = 0;
+
   separatorKeysCodes: number[] = [ENTER, COMMA];
   interestCtrl = new FormControl('');
 
@@ -29,7 +31,7 @@ export class ProfileFormComponent implements OnInit {
   selectedInterests: Interest[] = [];
   roles: Role[] = [];
   checkedRoles: Role[] = [];
-  model = new Profile(0, '', '', this.selectedInterests, this.checkedRoles);
+  model = new Profile('', '', this.selectedInterests, this.checkedRoles);
   submitted = false;
 
   @ViewChild('interestInput') interestInput?: ElementRef<HTMLInputElement>;
@@ -54,7 +56,7 @@ export class ProfileFormComponent implements OnInit {
   }
 
   onSubmit() {
-    return this.http.post(this.endpoint + 'profile/create/', this.model).subscribe(data => console.log(data));
+    return this.http.post(`${this.endpoint}profile/${this.id}`, this.model).subscribe(data => console.log(data));
   }
 
   getRoles(): void {
@@ -72,7 +74,7 @@ export class ProfileFormComponent implements OnInit {
   }
 
   getUserId(): void {
-    this.userService.getMe().subscribe(data => this.model.userId = parseInt(data.id));
+    this.userService.getMe().subscribe(data => this.id = parseInt(data.id));
   }
 
   remove(interest: Interest) {

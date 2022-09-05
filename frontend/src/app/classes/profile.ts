@@ -5,7 +5,6 @@ import {Interest} from "./interest";
 
 export class Profile {
   constructor(
-    public userId: number,
     public firstname: string,
     public lastname: string,
     public interests?: Interest[], // array of Interest

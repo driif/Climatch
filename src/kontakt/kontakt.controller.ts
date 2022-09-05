@@ -7,12 +7,13 @@ export class KontaktController {
     constructor(private kontaktService: KontaktService) {}
 
     @Get(':id')
-    getKontakts(@Param('id') id: number) {
+    getKontakts(@Param('id') id: string) {
         console.log(id);
     }
 
-    @Post('create')
-    createKontakt(@Body() kontakt: Kontakt) {
-        return this.kontaktService.createKontakt(kontakt); 
+    @Post(':id')
+    createKontakt(@Param('id') id: string, @Body() kontakt: Kontakt) {
+        const profileId = parseInt(id)
+        return this.kontaktService.createKontakt(profileId, kontakt); 
     }
 }

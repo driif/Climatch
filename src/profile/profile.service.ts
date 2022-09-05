@@ -9,42 +9,26 @@ export class ProfileService {
     async getProfile(profileId: number) {
         const profile = await this.prisma.profile.findUnique({
             where: {
-                id: profileId,
+                userId: profileId,
             },
         });
         return profile;
     }
-
-    async createProfile(dto: ProfileDto) {
-        const profile = await this.prisma.profile.create({
-          data: {
-            userId: dto.userId,
-            firstname: dto.firstname,
-            lastname: dto.lastname,
-            interests: {connect: dto.interests.map(interest => ({id: interest.id})) || []},
-            roles: {connect: dto.roles.map(role => ({id: role.id})) || []},
-            bio: dto.bio,
-            location: dto.location,
-            city: dto.city,
-          }
-        });    
-        return profile;      
-    }
-
+    
     async updateProfile(profileId: number, dto: ProfileDto) {
-        const profile = await this.prisma.profile.update({
-          data: {
-            userId: dto.userId,
-            firstname: dto.firstname,
-            lastname: dto.lastname,
-            interests: { connect: dto.interests },
-            roles: { connect: dto.roles },
-            bio: dto.bio,
-            location: dto.location,
-            city: dto.city,
-          },
-          where: { id: profileId }
-        });    
-        return profile;
-      }
+      const profile = await this.prisma.profile.update({
+        where: { userId: profileId },
+        data: {            
+          userId: profileId,
+          firstname: dto.firstname,
+          lastname: dto.lastname,
+          interests: {connect: dto.interests.map(interest => ({id: interest.id})) || []},
+          roles: {connect: dto.roles.map(role => ({id: role.id})) || []},
+          bio: dto.bio,
+          location: dto.location,
+          city: dto.city,
+        }
+      });    
+      return profile;
+    }
 }

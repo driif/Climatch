@@ -14,11 +14,11 @@ export class KontaktComponent {
   @Input()
   profileId?: number;
 
-  model = { profileId: this.profileId, } as Kontakt;
+  model = {} as Kontakt;
 
   constructor(private http: HttpClient) {}
   
   onSubmit() {
-    return this.http.post(this.endpoint + 'kontakt/create/', this.model).subscribe(data => console.log(data));
+    return this.http.post(`${this.endpoint}kontakt/${this.profileId}`, this.model).subscribe(data => console.log(data));
   }
 }
