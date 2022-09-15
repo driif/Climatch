@@ -26,6 +26,9 @@ import { MyProfileComponent } from './components/my-profile/my-profile.component
 import { MatMenuModule } from '@angular/material/menu';
 import { AlertComponent } from './webcomponents/alert/alert.component';
 import { KontaktComponent } from './components/kontakt/kontakt.component';
+import { MapModule } from './webcomponents/map/map.module';
+import { GooglePlaceModule } from "ngx-google-places-autocomplete";
+import { AutocompletePlaceComponent } from './webcomponents/autocomplete-place/autocomplete-place.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +45,7 @@ import { KontaktComponent } from './components/kontakt/kontakt.component';
     MyProfileComponent,
     AlertComponent,
     KontaktComponent,
+    AutocompletePlaceComponent,
   ],
 	imports: [
 		BrowserModule,
@@ -56,6 +60,8 @@ import { KontaktComponent } from './components/kontakt/kontakt.component';
 		MatChipsModule,
 		MatIconModule,
 		MatMenuModule,
+    MapModule,
+    GooglePlaceModule,
 	],
   providers: [
     {

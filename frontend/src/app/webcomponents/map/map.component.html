@@ -1,0 +1,14 @@
+<div style="display: flex; justify-content: space-around;" *ngIf="apiLoaded | async">
+    <google-map
+        height= "800px"
+        width= "1200px"
+        [options]="options"
+        (mapClick)="addMarker($event)">
+    </google-map>
+    <map-marker 
+        *ngFor="let markerPosition of markerPositions"
+        [position]="markerPosition"
+        [options]="markerOptions">
+    </map-marker>
+</div>
+{{ markerPositions | json }}

@@ -9,12 +9,14 @@ import {UsersComponent} from "./components/administration/users/users.component"
 import {InterestsComponent} from "./components/administration/interests/interests.component";
 import {RolesComponent} from "./components/administration/roles/roles.component";
 import { MyProfileComponent } from './components/my-profile/my-profile.component';
+import { MapComponent } from './webcomponents/map/map.component';
 
 const routes: Routes = [
   {path: 'signup', component: SignupComponent},
   {path: 'edit-profile', component: ProfileFormComponent, canActivate: [AuthGuard]},
   {path: 'my-profile', component: MyProfileComponent, canActivate: [AuthGuard]},
   {path: 'login', component: SigninComponent},
+  {path: 'map', component: MapComponent},
   {
     path: 'administration',
     component: AdministrationComponent,
